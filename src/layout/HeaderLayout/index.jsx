@@ -1,9 +1,22 @@
-import { Link } from "@tanstack/react-router";
-import { Button } from "antd";
+import { Link, redirect } from "@tanstack/react-router";
+
+import {
+  SignInButton,
+  SignOutButton,
+  useAuth,
+  useUser,
+} from "@clerk/clerk-react";
+
 import { Header } from "antd/es/layout/layout";
-import React from "react";
+
+import PrimaryBtn from "../../components/custom-buttons/PrimaryBtn";
 
 export default function HeaderLayout() {
+  const { isSignedIn } = useUser();
+  const { sessionId } = useAuth();
+
+  console.log("qqqqqqqqqqqqqqq", sessionId);
+
   return (
     <Header className="flex justify-between items-center py-14 bg-dark-08 border-b-2 border-dark-25">
       <Link
@@ -12,9 +25,17 @@ export default function HeaderLayout() {
       >
         Damien
       </Link>
-      <Button className="bg-transparent  text-cGrey-08 border-cGrey-08 capitalize rounded-2xl px-16 transition-all duration-200 ease-in-out hover:!bg-dark-06 hover:!text-white hover:!border-dark-30">
-        Login
-      </Button>
+      {isSignedIn ? (
+        <PrimaryBtn
+          label={
+            <SignOutButton
+              signOutCallback={async (e) => redirect({ to: "/" })}
+            />
+          }
+        />
+      ) : (
+        <PrimaryBtn label={<SignInButton />} />
+      )}
     </Header>
   );
 }

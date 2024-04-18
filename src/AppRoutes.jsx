@@ -3,6 +3,7 @@ import {
   createRoute,
   createRouter,
   Outlet,
+  redirect,
   RouterProvider,
 } from "@tanstack/react-router";
 
@@ -56,6 +57,7 @@ export default function AppRoutes() {
       </PageWrapper>
     ),
   });
+  let as = true;
 
   const workRoute = createRoute({
     getParentRoute: () => rootRoute,

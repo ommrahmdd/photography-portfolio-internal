@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@clerk/clerk-react": "^4.31.0",
     "@react-query-firebase/firestore": "^1.0.0-dev.7",
     "@tanstack/react-router": "^1.28.4",
     "@testing-library/jest-dom": "^5.17.0",
