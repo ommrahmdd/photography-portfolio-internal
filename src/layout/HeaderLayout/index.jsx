@@ -13,9 +13,6 @@ import PrimaryBtn from "../../components/custom-buttons/PrimaryBtn";
 
 export default function HeaderLayout() {
   const { isSignedIn } = useUser();
-  const { sessionId } = useAuth();
-
-  console.log("qqqqqqqqqqqqqqq", sessionId);
 
   return (
     <Header className="flex justify-between items-center py-14 bg-dark-08 border-b-2 border-dark-25">
@@ -26,15 +23,9 @@ export default function HeaderLayout() {
         Damien
       </Link>
       {isSignedIn ? (
-        <PrimaryBtn
-          label={
-            <SignOutButton
-              signOutCallback={async (e) => redirect({ to: "/" })}
-            />
-          }
-        />
+        <PrimaryBtn label={<SignOutButton />} />
       ) : (
-        <PrimaryBtn label={<SignInButton />} />
+        <PrimaryBtn label="SignIn" asLink to={"/signIn"} />
       )}
     </Header>
   );

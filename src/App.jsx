@@ -15,7 +15,17 @@ function App() {
   }
 
   return (
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+    <ClerkProvider
+      publishableKey={PUBLISHABLE_KEY}
+      appearance={{
+        elements: {
+          footer: {
+            display: "none",
+            visibility: "hidden",
+          },
+        },
+      }}
+    >
       <QueryClientProvider client={client}>
         <AppRoutes />
       </QueryClientProvider>

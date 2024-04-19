@@ -15,8 +15,12 @@ import Services from "./pages/Services";
 import Work from "./pages/Work";
 import Questions from "./pages/Questions";
 import Clients from "./pages/Clients";
+import SignIn from "./pages/SignIn";
+import { useAuth } from "@clerk/clerk-react";
 
 export default function AppRoutes() {
+  const { isSignedIn } = useAuth();
+
   const RootComp = () => (
     <div className="space-x-5">
       <AppLayout>
@@ -88,6 +92,16 @@ export default function AppRoutes() {
     ),
   });
 
+  const signInRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/signIn",
+    component: () => (
+      <PageWrapper>
+        <SignIn />
+      </PageWrapper>
+    ),
+  });
+
   const routeTree = rootRoute.addChildren([
     galleryRoute,
     homeRoute,
@@ -95,6 +109,7 @@ export default function AppRoutes() {
     workRoute,
     questionsRoute,
     clientRoute,
+    signInRoute,
   ]);
 
   const router = createRouter({

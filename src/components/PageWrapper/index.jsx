@@ -1,7 +1,8 @@
 import { useRouterState } from "@tanstack/react-router";
 import React from "react";
 import { Cirecles } from "../../assets/images";
-import { SignIn, useUser } from "@clerk/clerk-react";
+import { useUser } from "@clerk/clerk-react";
+import CustomSignIn from "../CustomSignIn";
 
 export default function PageWrapper({ children }) {
   const router = useRouterState();
@@ -11,7 +12,7 @@ export default function PageWrapper({ children }) {
   ) : user ? (
     <Template>{children}</Template>
   ) : (
-    <SignIn />
+    <CustomSignIn />
   );
 }
 
