@@ -5,12 +5,26 @@ import { useNavigate } from "@tanstack/react-router";
 import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 
-import { Cart, Chat, Coffee, Folder, Home, Users } from "../../assets/icons";
+import {
+  Cart,
+  Chat,
+  Coffee,
+  Folder,
+  Home,
+  Setting,
+  Users,
+} from "../../assets/icons";
 
 import "./styles.scss";
+import { useUser } from "@clerk/clerk-react";
+import { ROLES } from "../../constants/Roles";
 
 export default function SidebarLayout() {
   const [isCollapsed, setCollapse] = useState(false);
+
+  const { user } = useUser();
+  const userRole = user?.organizationMemberships[0]?.role;
+  const isAdmin = userRole === ROLES.admin;
 
   const navigate = useNavigate();
 
@@ -45,6 +59,14 @@ export default function SidebarLayout() {
       label: <span className="mx-2 capitalize">questions</span>,
       icon: <Chat />,
     },
+
+    user && isAdmin
+      ? {
+          key: "org",
+          label: <span className="mx-2 capitalize">Organization</span>,
+          icon: <Setting />,
+        }
+      : {},
   ];
 
   return (

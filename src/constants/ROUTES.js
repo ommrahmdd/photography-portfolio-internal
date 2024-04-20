@@ -5,4 +5,5 @@ export const ROUTES = {
   questions: "questions",
   clients: "clients",
   services: "services",
+  org: "org",
 };

@@ -2,6 +2,7 @@ import { Layout } from "antd";
 import { Content } from "antd/es/layout/layout";
 
 import { HeaderLayout, SidebarLayout } from "./../index";
+import FooterLayout from "../Footer";
 
 export default function AppLayout({ children }) {
   return (
@@ -11,6 +12,7 @@ export default function AppLayout({ children }) {
         <SidebarLayout />
         <Content>{children}</Content>
       </Layout>
+      <FooterLayout />
     </Layout>
   );
 }

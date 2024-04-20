@@ -9,6 +9,7 @@
 .ant-layout-sider {
   border-right: 2px solid $dark-25 !important;
 }
+
 .ant-menu-item {
   svg {
     margin-top: 0.5rem;
@@ -30,4 +31,9 @@
 .ant-layout-sider-trigger {
   background-color: $dark-12 !important;
   border: 1px solid $cGrey-03;
+}
+
+/* Trigger button */
+.ant-layout-sider-trigger {
+  position: absolute !important;
 }

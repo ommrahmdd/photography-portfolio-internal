@@ -3,7 +3,6 @@ import {
   createRoute,
   createRouter,
   Outlet,
-  redirect,
   RouterProvider,
 } from "@tanstack/react-router";
 
@@ -16,11 +15,12 @@ import Work from "./pages/Work";
 import Questions from "./pages/Questions";
 import Clients from "./pages/Clients";
 import SignIn from "./pages/SignIn";
-import { useAuth } from "@clerk/clerk-react";
+import Organization from "./pages/Organization";
+import NotFound from "./pages/static/NotFound";
+import Auth from "./components/guards/Auth";
+import UnAuth from "./pages/static/UnAuth";
 
 export default function AppRoutes() {
-  const { isSignedIn } = useAuth();
-
   const RootComp = () => (
     <div className="space-x-5">
       <AppLayout>
@@ -28,8 +28,10 @@ export default function AppRoutes() {
       </AppLayout>
     </div>
   );
+
   const rootRoute = createRootRoute({
     component: RootComp,
+    notFoundComponent: NotFound,
   });
 
   const homeRoute = createRoute({
@@ -61,7 +63,6 @@ export default function AppRoutes() {
       </PageWrapper>
     ),
   });
-  let as = true;
 
   const workRoute = createRoute({
     getParentRoute: () => rootRoute,
@@ -72,6 +73,7 @@ export default function AppRoutes() {
       </PageWrapper>
     ),
   });
+
   const questionsRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: "/questions",
@@ -102,6 +104,28 @@ export default function AppRoutes() {
     ),
   });
 
+  const orgRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/org",
+    component: () => (
+      <Auth>
+        <PageWrapper>
+          <Organization />
+        </PageWrapper>
+      </Auth>
+    ),
+  });
+
+  const unAuthRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/unAuth",
+    component: () => (
+      <PageWrapper>
+        <UnAuth />
+      </PageWrapper>
+    ),
+  });
+
   const routeTree = rootRoute.addChildren([
     galleryRoute,
     homeRoute,
@@ -110,6 +134,8 @@ export default function AppRoutes() {
     questionsRoute,
     clientRoute,
     signInRoute,
+    orgRoute,
+    unAuthRoute,
   ]);
 
   const router = createRouter({
