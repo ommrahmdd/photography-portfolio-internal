@@ -1,0 +1,12 @@
+.cl-organizationProfile-root {
+  width: 100% !important;
+
+  .cl-card {
+    width: 100% !important;
+  }
+
+  .cl-scrollBox ~ div {
+    display: none;
+    visibility: hidden;
+  }
+}

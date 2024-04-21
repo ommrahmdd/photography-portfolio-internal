@@ -1,0 +1,15 @@
+@import "./../../assets/sass/colors.scss";
+
+.cl-signIn-start,
+.cl-signIn-password {
+  background-color: $cGrey-20;
+
+  .cl-footer ~ div {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .cl-formButtonPrimary {
+    background-color: $dark-12;
+  }
+}
