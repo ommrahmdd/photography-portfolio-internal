@@ -5,3 +5,5 @@ export { default as Coffee } from "./Coffee";
 export { default as Users } from "./Users";
 export { default as Cart } from "./Cart";
 export { default as Setting } from "./Setting";
+export { default as Texting } from "./Texting";
+export { default as Email } from "./Email";

@@ -1,5 +1,6 @@
 import { Footer } from "antd/es/layout/layout";
 import TextLogo from "../../components/TextLogo";
+import { Email, Texting } from "../../assets/icons";
 
 export default function FooterLayout() {
   return (
@@ -9,9 +10,15 @@ export default function FooterLayout() {
         <TextLogo size="lg" />
         <div className="">
           <h5 className="text-xl mb-3">Contact me</h5>
-          <ul className="font-extralight text-lg">
-            <li>010-2627-1970</li>
-            <li>ommrahmdd@gmail.com</li>
+          <ul className="font-extralight text-md space-y-2">
+            <li className="flex items-center space-x-3">
+              <Texting />
+              <span>010-2627-1970</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <Email />
+              <span>ommrahmdd@gmail.com</span>
+            </li>
           </ul>
         </div>
       </div>
