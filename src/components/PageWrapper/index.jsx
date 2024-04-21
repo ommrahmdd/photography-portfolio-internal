@@ -1,4 +1,4 @@
-import { useRouterState } from "@tanstack/react-router";
+import { useLayoutEffect, useRouterState } from "@tanstack/react-router";
 
 import { useUser } from "@clerk/clerk-react";
 
@@ -79,6 +79,10 @@ const Template = ({ children }) => {
 
   const currentPage = pathnameMapper[pathname];
 
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative p-8 bg-dark-08 min-h-screen text-cGrey-12">
       {userRole !== ROLES.admin && (
@@ -110,10 +114,10 @@ const Template = ({ children }) => {
         </h2>
       </div>
 
-      {children}
+      <div className="relative z-10">{children}</div>
 
       {/* Page background */}
-      <div className="absolute bottom-0 right-0 opacity-15 ">
+      <div className="absolute bottom-0 right-0 opacity-15  ">
         <Cirecles />
       </div>
     </div>

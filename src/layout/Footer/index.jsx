@@ -1,11 +1,12 @@
 import { Footer } from "antd/es/layout/layout";
+import TextLogo from "../../components/TextLogo";
 
 export default function FooterLayout() {
   return (
     <Footer className="bg-dark-08 border-t border-cGrey-03 text-cGrey-20  px-20">
       {/* First row */}
       <div className="py-10 flex flex-col md:flex-row md:justify-between md:items-center">
-        <h3 className="text-7xl font-extralight">Demin</h3>
+        <TextLogo size="lg" />
         <div className="">
           <h5 className="text-xl mb-3">Contact me</h5>
           <ul className="font-extralight text-lg">

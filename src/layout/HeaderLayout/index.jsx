@@ -6,19 +6,17 @@ import { Header } from "antd/es/layout/layout";
 
 import PrimaryBtn from "../../components/custom-buttons/PrimaryBtn";
 
+import logo from "./../../assets/images/logo.png";
+
 import "./style.scss";
+import TextLogo from "../../components/TextLogo";
 
 export default function HeaderLayout() {
   const { isSignedIn, user } = useUser();
 
   return (
     <Header className="flex justify-between items-center py-14 bg-dark-08 border-b-2 border-dark-25">
-      <Link
-        to="/"
-        className="text-cGrey-20 text-2xl uppercase hover:text-cGrey-20 md:text-3xl lg:text-4xl"
-      >
-        Damien
-      </Link>
+      <TextLogo />
       {isSignedIn ? (
         <div className="flex justify-center items-center gap-2">
           <p className="text-cGrey-15 hidden md:block">
