@@ -21,6 +21,7 @@ import {
 import NotFound from "./pages/static/NotFound";
 import Auth from "./components/guards/Auth";
 import UnAuth from "./pages/static/UnAuth";
+import ValidateUnAuth from "./components/ValidateUnAuth";
 
 export default function AppRoutes() {
   const RootComp = () => (
@@ -123,9 +124,11 @@ export default function AppRoutes() {
     getParentRoute: () => rootRoute,
     path: "/unAuth",
     component: () => (
-      <PageWrapper>
-        <UnAuth />
-      </PageWrapper>
+      <ValidateUnAuth>
+        <PageWrapper>
+          <UnAuth />
+        </PageWrapper>
+      </ValidateUnAuth>
     ),
   });
 
