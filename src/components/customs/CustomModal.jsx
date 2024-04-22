@@ -32,9 +32,16 @@ export default function CustomModal({
       <Modal
         open={isModalOpen}
         title={
-          <h6 className="text-lg text-center mb-5 mt-6 capitalize md:text-xl">
-            {title}
-          </h6>
+          <div className="flex justify-center">
+            <h6
+              className="text-lg text-center mb-5 mt-6 px-10 py-2 capitalize bg-transparent border-dashed border border-cOrange md:text-xl"
+              style={{
+                clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)",
+              }}
+            >
+              {title}
+            </h6>
+          </div>
         }
         onOk={() => setModalOpen(false)}
         onCancel={() => setModalOpen(false)}
