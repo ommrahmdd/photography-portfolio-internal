@@ -125,6 +125,8 @@ export default function ImagesList() {
         setModalOpen={setLoadingShow}
         title="Deleteing Image"
         loading
+        iconType="loading"
+        isClosable={false}
       />
     </>
   );

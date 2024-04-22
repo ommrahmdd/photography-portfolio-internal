@@ -1,4 +1,8 @@
-import { LoadingOutlined } from "@ant-design/icons";
+import {
+  Loading3QuartersOutlined,
+  LoadingOutlined,
+  QuestionCircleFilled,
+} from "@ant-design/icons";
 import { Button, ConfigProvider, Modal } from "antd";
 import React from "react";
 
@@ -10,6 +14,7 @@ export default function CustomModal({
   children,
   loading,
   isClosable = true,
+  iconType = "question",
 }) {
   return (
     <ConfigProvider
@@ -38,6 +43,7 @@ export default function CustomModal({
         mask={isClosable}
         maskClosable={isClosable}
         centered
+        className="relative"
       >
         <p className="font-light  mb-10 text-md text-center w-1/2 mx-auto text-cGrey-15 lg:text-lg">
           {secondaryText}
@@ -52,7 +58,22 @@ export default function CustomModal({
             />
           </div>
         )}
+
+        {iconMapper[iconType]}
       </Modal>
     </ConfigProvider>
   );
 }
+
+const iconProps = {
+  style: {
+    color: "orange",
+    opacity: ".15",
+  },
+  className: "text-8xl absolute z-0 right-10 top-1/2 -translate-y-1/2",
+};
+
+const iconMapper = {
+  question: <QuestionCircleFilled {...iconProps} />,
+  loading: <Loading3QuartersOutlined {...iconProps} />,
+};
