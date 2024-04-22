@@ -62,8 +62,8 @@ export default function NotFoundIcon() {
           y2="68.9093"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42B3AE" />
-          <stop offset="1" stop-color="#034C41" />
+          <stop stop-color="rgb(96, 80, 50)" />
+          <stop offset="1" stop-color="orange" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_1_252"
@@ -73,7 +73,7 @@ export default function NotFoundIcon() {
           y2="198.997"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42B3AE" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -84,8 +84,8 @@ export default function NotFoundIcon() {
           y2="20.6219"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42B3AE" />
-          <stop offset="1" stop-color="#034C41" />
+          <stop stop-color="rgb(96, 80, 50)" />
+          <stop offset="1" stop-color="orange" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_1_252"
@@ -95,8 +95,8 @@ export default function NotFoundIcon() {
           y2="28.235"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42B3AE" />
-          <stop offset="1" stop-color="#034C41" />
+          <stop stop-color="rgb(96, 80, 50)" />
+          <stop offset="1" stop-color="orange" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_1_252"
@@ -106,8 +106,8 @@ export default function NotFoundIcon() {
           y2="70.649"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42B3AE" />
-          <stop offset="1" stop-color="#034C41" />
+          <stop stop-color="rgb(96, 80, 50)" />
+          <stop offset="1" stop-color="orange" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_1_252"
@@ -117,8 +117,8 @@ export default function NotFoundIcon() {
           y2="105.258"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.2127" stop-color="#42B3AE" />
-          <stop offset="1" stop-color="#034C41" />
+          <stop offset="0.2127" stop-color="rgb(96, 80, 50)" />
+          <stop offset="1" stop-color="orange" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_1_252"
@@ -128,8 +128,8 @@ export default function NotFoundIcon() {
           y2="70.6491"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.2127" stop-color="#42B3AE" />
-          <stop offset="1" stop-color="#034C41" />
+          <stop offset="0.2127" stop-color="rgb(96, 80, 50)" />
+          <stop offset="1" stop-color="orange" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_1_252"
@@ -139,7 +139,7 @@ export default function NotFoundIcon() {
           y2="129.036"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42B3AE" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -150,7 +150,7 @@ export default function NotFoundIcon() {
           y2="110.675"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42B3AE" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -161,7 +161,7 @@ export default function NotFoundIcon() {
           y2="127.547"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42B3AE" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -172,7 +172,7 @@ export default function NotFoundIcon() {
           y2="155.93"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42B3AE" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
       </defs>
