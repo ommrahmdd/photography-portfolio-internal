@@ -5,11 +5,11 @@ import React from "react";
 export default function CustomModal({
   isModalOpen,
   setModalOpen,
-  Buttons,
   title,
   secondaryText,
   children,
   loading,
+  isClosable = true,
 }) {
   return (
     <ConfigProvider
@@ -24,26 +24,24 @@ export default function CustomModal({
         },
       }}
     >
-      {/* <Button
-        size="middle"
-        className="px-12 font-bold hover:!bg-dark-06 hover:!border-cGrey-12 hover:!text-cGrey-12"
-        onClick={() => setModalShow(false)}
-      >
-        Ok
-      </Button> */}
       <Modal
         open={isModalOpen}
         title={
-          <h6 className="text-center mb-10 mt-4 capitalize">Uploading image</h6>
+          <h6 className="text-lg text-center mb-5 mt-6 capitalize md:text-xl">
+            {title}
+          </h6>
         }
         onOk={() => setModalOpen(false)}
         onCancel={() => setModalOpen(false)}
         footer={() => children}
-        closable
-        mask
-        maskClosable
+        closable={isClosable}
+        mask={isClosable}
+        maskClosable={isClosable}
         centered
       >
+        <p className="font-light  mb-10 text-md text-center w-1/2 mx-auto text-cGrey-15 lg:text-lg">
+          {secondaryText}
+        </p>
         {loading && (
           <div className="flex justify-center">
             <LoadingOutlined

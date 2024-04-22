@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import Dragger from "antd/es/upload/Dragger";
-import { Button, ConfigProvider, Form, Modal, message } from "antd";
+import { Form, message } from "antd";
+
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../firebase/config";
-import { v4 } from "uuid";
 import { addDoc, collection } from "firebase/firestore";
+
+import { v4 } from "uuid";
 import uploadImage from "./../../assets/images/uploadFile.png";
 import CustomModal from "../customs/CustomModal";
 
@@ -15,7 +18,7 @@ export default function UploadImageSection() {
 
   const [messageApi, contextHolder] = message.useMessage();
 
-  const success = () => {
+  const handleSuccessMessage = () => {
     messageApi.open({
       type: "success",
       content: "Image has been uploaded",
@@ -28,7 +31,7 @@ export default function UploadImageSection() {
       imgSrc: url,
     }).then((e) => {
       setLoadingModalShow(false);
-      success();
+      handleSuccessMessage();
     });
   };
 
