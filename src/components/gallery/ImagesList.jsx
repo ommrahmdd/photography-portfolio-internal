@@ -11,6 +11,7 @@ import CustomModal from "../customs/CustomModal";
 import { handleSuccessMesssage } from "../../helpers/messageComponent";
 import { deleteObject, ref } from "firebase/storage";
 import NoData from "../NoData";
+import { usePermissions } from "../../hooks/usePermissions";
 
 export default function ImagesList() {
   const galleryCollectionRef = collection(db, "gallery");
@@ -24,6 +25,8 @@ export default function ImagesList() {
       subscribe: true,
     }
   );
+
+  const { canUpdate } = usePermissions();
 
   const [isConfirmModalShow, setConfirmModalShow] = useState(false);
   const [isLoadingShow, setLoadingShow] = useState(false);
@@ -71,28 +74,30 @@ export default function ImagesList() {
                   }`}
                   loading="eager"
                 />
-                <div className="py-2 pl-9 pr-3 space-x-3  absolute right-0 bottom-0 bg-dark-03 border-cOrange border-2 rounded-tl-full">
-                  <StarFilled
-                    className="text-lg transition-all duration-200 hover:opacity-70 hover:cursor-pointer"
-                    style={{
-                      color: el.data().homePage ? "orange" : "white",
-                    }}
-                    onClick={() => {}}
-                  />
-                  <DeleteFilled
-                    className="text-lg transition-all duration-200 hover:opacity-70 hover:cursor-pointer"
-                    style={{
-                      color: "#E63946",
-                    }}
-                    onClick={() => {
-                      setImageDataForDelete({
-                        id: el.id,
-                        link: el.data().imgSrc,
-                      });
-                      setConfirmModalShow(true);
-                    }}
-                  />
-                </div>
+                {canUpdate && (
+                  <div className="py-2 pl-9 pr-3 space-x-3  absolute right-0 bottom-0 bg-dark-03 border-cOrange border-2 rounded-tl-full">
+                    <StarFilled
+                      className="text-lg transition-all duration-200 hover:opacity-70 hover:cursor-pointer"
+                      style={{
+                        color: el.data().homePage ? "orange" : "white",
+                      }}
+                      onClick={() => {}}
+                    />
+                    <DeleteFilled
+                      className="text-lg transition-all duration-200 hover:opacity-70 hover:cursor-pointer"
+                      style={{
+                        color: "#E63946",
+                      }}
+                      onClick={() => {
+                        setImageDataForDelete({
+                          id: el.id,
+                          link: el.data().imgSrc,
+                        });
+                        setConfirmModalShow(true);
+                      }}
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Confirmation modal */}
