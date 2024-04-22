@@ -15,7 +15,7 @@ export default function HeaderLayout() {
   const { isSignedIn, user } = useUser();
 
   return (
-    <Header className="flex justify-between items-center py-14 bg-dark-08 border-b-2 border-dark-25">
+    <Header className="flex justify-between items-center py-14 bg-dark-08 border-b-2 border-cOrange">
       <TextLogo />
       {isSignedIn ? (
         <div className="flex justify-center items-center gap-2">

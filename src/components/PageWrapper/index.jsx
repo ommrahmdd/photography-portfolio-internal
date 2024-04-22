@@ -104,10 +104,11 @@ const Template = ({ children }) => {
           className="absolute top-0 left-0 w-full h-full z-0 object-cover object-center grayscale blur-sm"
         />
         <h2
-          className="text-4xl text-cGrey-30 capitalize z-10 absolute top-1/2 -translate-y-1/2 left-7   text-stroke-2 md:text-9xl"
+          className="text-4xl text-cGrey-30 capitalize z-10 absolute top-1/2 -translate-y-1/2 left-7 bg-cOrange bg-opacity-75 p-2 md:text-9xl"
           style={{
             WebkitTextStrokeWidth: "1px",
             WebkitTextStrokeColor: "black",
+            clipPath: "content-box",
           }}
         >
           {currentPage?.title}

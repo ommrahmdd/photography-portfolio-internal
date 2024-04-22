@@ -1,10 +1,12 @@
 import { Footer } from "antd/es/layout/layout";
+
 import TextLogo from "../../components/TextLogo";
+
 import { Email, Texting } from "../../assets/icons";
 
 export default function FooterLayout() {
   return (
-    <Footer className="bg-dark-08 border-t border-cGrey-03 text-cGrey-20  px-20">
+    <Footer className="bg-dark-08 border-t border-cOrange text-cGrey-20  px-20">
       {/* First row */}
       <div className="py-10 flex flex-col md:flex-row md:justify-between md:items-center">
         <TextLogo size="lg" />
@@ -30,10 +32,11 @@ export default function FooterLayout() {
           href="https://ommrahmdd.vercel.app/"
           target="_blank"
           rel="noreferrer"
-          className="font-bold"
+          className="font-bold hover:text-cOrange"
         >
           Omar A.Youssef
         </a>
+        <span> &copy;2024</span>
       </p>
     </Footer>
   );

@@ -15,9 +15,9 @@ import {
   Users,
 } from "../../assets/icons";
 
-import "./styles.scss";
 import { useUser } from "@clerk/clerk-react";
 import { ROLES } from "../../constants/Roles";
+import "./styles.scss";
 
 export default function SidebarLayout() {
   const [isCollapsed, setCollapse] = useState(false);
