@@ -7,3 +7,4 @@ export { default as Cart } from "./Cart";
 export { default as Setting } from "./Setting";
 export { default as Texting } from "./Texting";
 export { default as Email } from "./Email";
+export { default as UploadImage } from "./UploadImage";

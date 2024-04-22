@@ -21,6 +21,8 @@ module.exports = {
         "cGrey-20": "#F2F2F3",
         "cGrey-25": "#F7F7F8",
         "cGrey-30": "#FCFCFD",
+
+        cOrange: "rgb(96, 80, 50)",
       },
     },
   },

@@ -49,35 +49,57 @@ export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
-      {SERVICES.map((el, index) => (
-        <Card
-          key={index}
-          hoverable
-          className="bg-dark-08 !text-cGrey-15 border-cGrey-08"
-          cover={
-            <img
-              src={el.image}
-              alt="test"
-              className="w-full h-80 object-cover transition-all duration-300 ease-in-out p-10 hover:p-0 "
-            />
-          }
-          onClick={() =>
-            navigate({
-              to: el.route,
-            })
-          }
-        >
-          <Card.Meta
-            title={
-              <h6 className="text-cGrey-25 text-xl md:text-2xl lg:text-3xl uppercase font-light mb-3">
-                {el.title}
-              </h6>
-            }
-            description={<p className="text-cGrey-25">{el.description}</p>}
-          />
-        </Card>
-      ))}
+    <div className="">
+      {/* Introduction */}
+      <div className="my-20 space-y-6">
+        <h5 className="text-3xl capitalize font-bold text-cGrey-15">
+          Photography dashboard
+        </h5>
+        <p className="text-2xl font-light text-cGrey-12 w-11/12">
+          Step into the world of visual storytelling with our photography
+          dashboard. This platform is meticulously crafted to elevate your
+          photography experience, providing you with tools and insights to
+          capture, organize, and showcase your best work. Whether you're a
+          seasoned professional or an aspiring enthusiast, this dashboard is
+          your gateway to unleashing your creativity and sharing your passion
+          with the world.
+        </p>
+      </div>
+      <div className="my-20 space-y-6">
+        <h5 className="text-3xl capitalize font-bold text-cGrey-15">
+          Sections managmenet
+        </h5>
+        <div className="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
+          {SERVICES.map((el, index) => (
+            <Card
+              key={index}
+              hoverable
+              className="bg-dark-08 !text-cGrey-15 border-cOrange"
+              cover={
+                <img
+                  src={el.image}
+                  alt="test"
+                  className="w-full h-80 object-cover transition-all duration-300 ease-in-out p-10 hover:p-0 "
+                />
+              }
+              onClick={() =>
+                navigate({
+                  to: el.route,
+                })
+              }
+            >
+              <Card.Meta
+                title={
+                  <h6 className="text-cGrey-25 text-xl md:text-2xl lg:text-3xl uppercase font-light mb-3">
+                    {el.title}
+                  </h6>
+                }
+                description={<p className="text-cGrey-25">{el.description}</p>}
+              />
+            </Card>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

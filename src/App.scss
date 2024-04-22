@@ -2,7 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./assets//sass/colors.scss";
+
 body,
 html {
   font-family: "Manrope";
+}
+
+*::-webkit-scrollbar {
+  background-color: $dark-06;
+  width: 9px;
+  height: 9px;
+  direction: rtl !important;
+  border-radius: 15px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $cOrange;
+  border-radius: 15px;
 }

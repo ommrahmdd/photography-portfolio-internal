@@ -6,16 +6,18 @@ import {
   RouterProvider,
 } from "@tanstack/react-router";
 
-import Home from "./pages/Home";
 import { AppLayout } from "./layout";
-import Gallery from "./pages/Gallery";
 import PageWrapper from "./components/PageWrapper";
-import Services from "./pages/Services";
-import Work from "./pages/Work";
-import Questions from "./pages/Questions";
-import Clients from "./pages/Clients";
-import SignIn from "./pages/SignIn";
-import Organization from "./pages/Organization";
+import {
+  Work,
+  Clients,
+  Gallery,
+  Home,
+  Organization,
+  Questions,
+  Services,
+  SignIn,
+} from "./pages";
 import NotFound from "./pages/static/NotFound";
 import Auth from "./components/guards/Auth";
 import UnAuth from "./pages/static/UnAuth";
@@ -32,6 +34,7 @@ export default function AppRoutes() {
   const rootRoute = createRootRoute({
     component: RootComp,
     notFoundComponent: NotFound,
+    wrapInSuspense: true,
   });
 
   const homeRoute = createRoute({
