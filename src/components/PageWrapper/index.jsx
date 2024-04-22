@@ -97,7 +97,7 @@ const Template = ({ children }) => {
           className="mb-5"
         />
       )}
-      <div className={`mb-10 w-full h-80 relative`}>
+      <div className={`mb-10 w-full h-96 relative`}>
         <img
           src={currentPage?.imgName}
           alt="background"

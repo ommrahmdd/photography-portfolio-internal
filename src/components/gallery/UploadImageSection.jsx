@@ -97,6 +97,9 @@ export default function UploadImageSection() {
         isModalOpen={isLoadingModalShow}
         setModalOpen={setLoadingModalShow}
         loading
+        title="Uploading image"
+        iconType="loading"
+        isClosable={false}
       />
     </div>
   );

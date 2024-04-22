@@ -9,6 +9,7 @@ html {
   font-family: "Manrope";
 }
 
+// Scroll
 *::-webkit-scrollbar {
   background-color: $dark-06;
   width: 9px;
@@ -20,4 +21,11 @@ html {
 *::-webkit-scrollbar-thumb {
   background-color: $cOrange;
   border-radius: 15px;
+}
+
+.ant-message-notice-content {
+  width: 100% !important;
+  background-color: $cOrange !important;
+  color: $cGrey-20 !important;
+  font-size: 17px !important;
 }

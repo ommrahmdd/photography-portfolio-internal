@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate, useRouterState } from "@tanstack/react-router";
 
 import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
@@ -21,6 +21,9 @@ import "./styles.scss";
 
 export default function SidebarLayout() {
   const [isCollapsed, setCollapse] = useState(false);
+
+  const { location } = useRouterState();
+  const pathname = location?.pathname?.split("/")[1];
 
   const { user } = useUser();
   const userRole = user?.organizationMemberships[0]?.role;
@@ -80,6 +83,7 @@ export default function SidebarLayout() {
       <Menu
         theme="dark"
         defaultSelectedKeys={[""]}
+        selectedKeys={[pathname]}
         mode="inline"
         items={items}
         onClick={(e) => navigate({ to: `/${e.key}` })}
