@@ -1,4 +1,4 @@
-import { OrganizationProfile } from "@clerk/clerk-react";
+import { OrganizationProfile, UserProfile } from "@clerk/clerk-react";
 
 import { dark } from "@clerk/themes";
 

@@ -2,7 +2,13 @@
 
 .cl-signIn-start,
 .cl-signIn-password {
-  background-color: $cGrey-20;
+  background-color: $cOrange;
+
+  h1,
+  p,
+  label {
+    color: $cGrey-12 !important;
+  }
 
   .cl-footer ~ div {
     display: none !important;
@@ -11,5 +17,10 @@
 
   .cl-formButtonPrimary {
     background-color: $dark-12;
+  }
+
+  .cl-formButtonPrimary:hover,
+  .cl-formButtonPrimary:active {
+    box-shadow: $cGrey-08 0px 0px 0px 2px;
   }
 }

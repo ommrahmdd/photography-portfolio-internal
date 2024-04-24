@@ -6,6 +6,7 @@ import questions from "./../../assets/images/questions.jpg";
 import services from "./../../assets/images/services.jpg";
 import work from "./../../assets/images/work.jpg";
 import { useNavigate } from "@tanstack/react-router";
+import PrimaryBtn from "../../components/custom-buttons/PrimaryBtn";
 
 const SERVICES = [
   {

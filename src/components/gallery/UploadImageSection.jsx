@@ -25,10 +25,11 @@ export default function UploadImageSection() {
     });
   };
 
-  const hanleAddDocument = (url) => {
+  const hanleAddDocument = ({ url, size }) => {
     addDoc(galleryCollectionRef, {
       homePage: false,
       imgSrc: url,
+      imgSize: size,
     }).then((e) => {
       setLoadingModalShow(false);
       handleSuccessMessage();
@@ -44,7 +45,7 @@ export default function UploadImageSection() {
     })
       .then((e) => {
         getDownloadURL(e.ref).then((url) => {
-          hanleAddDocument(url);
+          hanleAddDocument({ url, size: e?.metadata?.size });
         });
       })
       .catch((err) => {

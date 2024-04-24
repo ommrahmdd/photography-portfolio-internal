@@ -6,10 +6,9 @@ import { Header } from "antd/es/layout/layout";
 
 import PrimaryBtn from "../../components/custom-buttons/PrimaryBtn";
 
-import logo from "./../../assets/images/logo.png";
+import TextLogo from "../../components/TextLogo";
 
 import "./style.scss";
-import TextLogo from "../../components/TextLogo";
 
 export default function HeaderLayout() {
   const { isSignedIn, user } = useUser();
@@ -36,7 +35,9 @@ export default function HeaderLayout() {
           />
         </div>
       ) : (
-        <PrimaryBtn label="SignIn" asLink to={"/signIn"} />
+        <div className="">
+          <PrimaryBtn label="SignIn" asLink to={"/signIn"} />
+        </div>
       )}
     </Header>
   );
