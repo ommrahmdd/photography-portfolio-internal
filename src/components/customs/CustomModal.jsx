@@ -1,4 +1,5 @@
 import {
+  CloseOutlined,
   Loading3QuartersOutlined,
   LoadingOutlined,
   QuestionCircleFilled,
@@ -34,7 +35,7 @@ export default function CustomModal({
         title={
           <div className="flex justify-center">
             <h6
-              className="text-lg text-center mb-5 mt-6 px-10 py-2 capitalize bg-transparent border-dashed border border-cOrange md:text-xl"
+              className="text-lg text-center mb-5 mt-4 px-10 py-2 capitalize bg-transparent border-dashed border border-cOrange md:text-xl"
               style={{
                 clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)",
               }}
@@ -51,6 +52,13 @@ export default function CustomModal({
         maskClosable={isClosable}
         centered
         className="relative"
+        closeIcon={
+          <CloseOutlined
+            style={{
+              color: "rgb(96, 80, 50)",
+            }}
+          />
+        }
       >
         <p className="font-light  mb-10 text-md text-center w-1/2 mx-auto text-cGrey-15 lg:text-lg">
           {secondaryText}
@@ -77,7 +85,7 @@ const iconProps = {
     color: "orange",
     opacity: ".15",
   },
-  className: "text-8xl absolute z-0 right-10 top-1/2 -translate-y-1/2",
+  className: "text-8xl absolute z-0 left-10 top-1/2 -translate-y-1/6",
 };
 
 const iconMapper = {

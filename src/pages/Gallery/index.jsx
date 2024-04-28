@@ -8,7 +8,7 @@ export default function Gallery() {
   return (
     <div>
       {canCreate && <UploadImageSection />}
-      <div className="max-h-full overflow-y-auto">
+      <div className="max-h-[1000px] overflow-y-auto">
         <ImagesList />
       </div>
     </div>

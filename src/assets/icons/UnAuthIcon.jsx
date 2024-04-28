@@ -24,7 +24,7 @@ export default function UnAuthIcon() {
       />
       <path
         d="M165.243 5.70023L141.962 14.9745L148.094 21.035L129.643 59.1937L137.005 57.9794L126.65 95.142L132.684 92.6843L131.029 109.51L135.219 107.197"
-        stroke="#41B2AD"
+        stroke="rgb(96, 80, 50)"
         stroke-width="3"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -32,7 +32,7 @@ export default function UnAuthIcon() {
       />
       <path
         d="M185.578 29.9783L163.941 26.4664L170.845 48.8723L165.244 47.6616L163.941 76.3206L153.681 83.7044L162.036 85.2314L141.963 113.959"
-        stroke="#41B2AD"
+        stroke="rgb(96, 80, 50)"
         stroke-width="3"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -40,7 +40,7 @@ export default function UnAuthIcon() {
       />
       <path
         d="M126.651 2L93.2956 32.2405L108.775 56.0897L97.0236 71.7262L113.376 87.9698L101.879 98.9891L112.478 109.703"
-        stroke="#41B2AD"
+        stroke="rgb(96, 80, 50)"
         stroke-width="3"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -48,7 +48,7 @@ export default function UnAuthIcon() {
       />
       <path
         d="M71.7996 36.4312V57.6046L82.6563 71.1361L80.2521 85.7001L87.2572 91.1716L85.5114 105.808"
-        stroke="#41B2AD"
+        stroke="rgb(96, 80, 50)"
         stroke-width="3"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -71,14 +71,14 @@ export default function UnAuthIcon() {
       />
       <path
         d="M145.945 211.091L184.658 245.163L235.254 209.837"
-        stroke="#41B2AD"
+        stroke="rgb(96, 80, 50)"
         stroke-width="5"
         stroke-miterlimit="10"
       />
       <path
         d="M85.3266 115.781L97.8927 159.196L157.894 181.09L123.258 208.789L107.935 239.775L85.3266 115.781Z"
-        fill="#41B2AD"
-        stroke="#41B2AD"
+        fill="rgb(96, 80, 50)"
+        stroke="rgb(96, 80, 50)"
         stroke-width="5"
         stroke-miterlimit="10"
         stroke-linecap="round"
@@ -112,7 +112,7 @@ export default function UnAuthIcon() {
       />
       <path
         d="M159.886 209.394L195.696 186.457L213.834 200.112L176.623 225.15L159.886 209.394Z"
-        fill="#41B2AD"
+        fill="rgb(96, 80, 50)"
       />
       <defs>
         <pattern
@@ -134,7 +134,7 @@ export default function UnAuthIcon() {
           y2="77.2577"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#41B2AD" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -145,7 +145,7 @@ export default function UnAuthIcon() {
           y2="101.42"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00A49B" />
+          <stop stop-color="orange" />
           <stop offset="1" stop-color="#00564C" />
         </linearGradient>
         <linearGradient
@@ -156,7 +156,7 @@ export default function UnAuthIcon() {
           y2="-189.512"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#41B2AD" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -167,7 +167,7 @@ export default function UnAuthIcon() {
           y2="75.8744"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#41B2AD" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -178,7 +178,7 @@ export default function UnAuthIcon() {
           y2="212.524"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#41B2AD" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -190,7 +190,7 @@ export default function UnAuthIcon() {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="white" />
-          <stop offset="1" stop-color="#41B2AD" />
+          <stop offset="1" stop-color="rgb(96, 80, 50)" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_1_478"
@@ -200,7 +200,7 @@ export default function UnAuthIcon() {
           y2="177.778"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00A49B" />
+          <stop stop-color="orange" />
           <stop offset="1" stop-color="#00564C" />
         </linearGradient>
         <linearGradient
@@ -211,7 +211,7 @@ export default function UnAuthIcon() {
           y2="90.7975"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#41B2AD" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -222,7 +222,7 @@ export default function UnAuthIcon() {
           y2="90.6323"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#41B2AD" />
+          <stop stop-color="rgb(96, 80, 50)" />
           <stop offset="1" stop-color="white" />
         </linearGradient>
         <linearGradient
@@ -234,7 +234,7 @@ export default function UnAuthIcon() {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="white" />
-          <stop offset="1" stop-color="#41B2AD" />
+          <stop offset="1" stop-color="rgb(96, 80, 50)" />
         </linearGradient>
         <image
           id="image0_1_478"

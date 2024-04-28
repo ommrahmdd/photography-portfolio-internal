@@ -63,13 +63,15 @@ export default function SidebarLayout() {
       icon: <Chat />,
     },
 
-    user && isAdmin
-      ? {
-          key: "org",
-          label: <span className="mx-2 capitalize">Organization</span>,
-          icon: <Setting />,
-        }
-      : {},
+    ...(user && isAdmin
+      ? [
+          {
+            key: "org",
+            label: <span className="mx-2 capitalize">Organization</span>,
+            icon: <Setting />,
+          },
+        ]
+      : []),
   ];
 
   return (
