@@ -1,0 +1,13 @@
+@import "./../../assets/sass/colors.scss";
+
+.ant-collapse-header {
+  background-color: $cOrange;
+  color: $cGrey-20 !important;
+  padding: 25px !important;
+}
+
+.ant-collapse-content-box {
+  color: $cGrey-20 !important;
+  padding-top: 25px !important;
+  border-bottom: 1px dashed $cOrange;
+}
