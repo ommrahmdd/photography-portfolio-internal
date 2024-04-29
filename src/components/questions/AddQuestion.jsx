@@ -5,6 +5,7 @@ import { Drawer, Input, Typography, message } from "antd";
 import { useStore } from "../../state/store";
 
 import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import { db } from "../../firebase/config";
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
@@ -20,6 +21,19 @@ const defaultValues = {
   question: "",
   answer: "",
 };
+
+const validationSchema = z.object({
+  question: z
+    .string({
+      required_error: "Requireeed",
+    })
+    .min(10, { message: "Question should be at least 10 characters" }),
+  answer: z
+    .string({
+      required_error: "Requireeed",
+    })
+    .min(10, { message: "Answer should be at least 10 characters" }),
+});
 
 export default function AddQuestion() {
   const {
@@ -43,6 +57,7 @@ export default function AddQuestion() {
     control,
   } = useForm({
     defaultValues,
+    resolver: zodResolver(validationSchema),
   });
 
   const handleActionCallback = ({ content }) => {
@@ -106,8 +121,11 @@ export default function AddQuestion() {
       >
         <form className="space-y-8" onSubmit={handleSubmit(handleOnSubmit)}>
           <div>
-            <Typography.Title level={5} className="font-light capitalize">
-              Question
+            <Typography.Title
+              level={5}
+              className="font-light capitalize space-x-2"
+            >
+              Question <Typography.Text type="danger">*</Typography.Text>
             </Typography.Title>
             <Controller
               name="question"
@@ -122,8 +140,11 @@ export default function AddQuestion() {
           </div>
 
           <div>
-            <Typography.Title level={5} className="font-light capitalize">
-              answer
+            <Typography.Title
+              level={5}
+              className="font-light capitalize space-x-2"
+            >
+              answer <Typography.Text type="danger">*</Typography.Text>
             </Typography.Title>
 
             <Controller

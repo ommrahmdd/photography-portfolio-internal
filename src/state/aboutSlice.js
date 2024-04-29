@@ -5,4 +5,8 @@ export const aboutSlice = (set) => ({
     set(() => ({
       statsDrawerOpen: true,
     })),
+  setStatsDrawerClose: () =>
+    set(() => ({
+      statsDrawerOpen: false,
+    })),
 });

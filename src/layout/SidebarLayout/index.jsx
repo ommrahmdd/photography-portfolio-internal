@@ -6,6 +6,7 @@ import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 
 import {
+  About,
   Cart,
   Chat,
   Coffee,
@@ -50,7 +51,7 @@ export default function SidebarLayout() {
     {
       key: "about",
       label: <span className="mx-2 capitalize">About</span>,
-      icon: <Chat />,
+      icon: <About />,
     },
     {
       key: "services",
