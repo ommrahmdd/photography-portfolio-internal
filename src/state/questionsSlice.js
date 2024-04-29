@@ -1,6 +1,7 @@
 export const questionsSlice = (set) => ({
   isFormDrawerOpen: false,
   dataForEdit: {},
+
   openDrawer: () =>
     set(() => ({
       isFormDrawerOpen: true,
@@ -9,7 +10,6 @@ export const questionsSlice = (set) => ({
     set(() => ({
       isFormDrawerOpen: false,
     })),
-
   setEditData: ({ isFormDrawerOpen, dataForEdit }) =>
     set(() => ({
       isFormDrawerOpen,

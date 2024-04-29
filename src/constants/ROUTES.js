@@ -6,4 +6,5 @@ export const ROUTES = {
   clients: "clients",
   services: "services",
   org: "org",
+  about: "about",
 };
