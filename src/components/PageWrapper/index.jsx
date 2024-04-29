@@ -13,6 +13,7 @@ import galleryPage from "./../../assets/images/galleryPage.jpg";
 import workPage from "./../../assets/images/workPage.jpg";
 import servicesPage from "./../../assets/images/servicesPage.jpg";
 import orgPage from "./../../assets/images/orgPage.jpg";
+import about from "./../../assets/images/about.jpg";
 
 import { Alert } from "antd";
 import { ROLES } from "../../constants/Roles";
@@ -51,6 +52,11 @@ const pathnameMapper = {
   [ROUTES.org]: {
     title: "members",
     imgName: orgPage,
+    description: "",
+  },
+  [ROUTES.about]: {
+    title: "about",
+    imgName: about,
     description: "",
   },
 };

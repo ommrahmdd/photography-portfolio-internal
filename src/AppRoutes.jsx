@@ -22,6 +22,7 @@ import NotFound from "./pages/static/NotFound";
 import Auth from "./components/guards/Auth";
 import UnAuth from "./pages/static/UnAuth";
 import ValidateUnAuth from "./components/ValidateUnAuth";
+import About from "./pages/About";
 
 export default function AppRoutes() {
   const RootComp = () => (
@@ -36,6 +37,7 @@ export default function AppRoutes() {
     component: RootComp,
     notFoundComponent: NotFound,
     wrapInSuspense: true,
+    errorComponent: NotFound,
   });
 
   const homeRoute = createRoute({
@@ -98,6 +100,16 @@ export default function AppRoutes() {
     ),
   });
 
+  const aboutRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/about",
+    component: () => (
+      <PageWrapper>
+        <About />
+      </PageWrapper>
+    ),
+  });
+
   const signInRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: "/signIn",
@@ -142,6 +154,7 @@ export default function AppRoutes() {
     signInRoute,
     orgRoute,
     unAuthRoute,
+    aboutRoute,
   ]);
 
   const router = createRouter({

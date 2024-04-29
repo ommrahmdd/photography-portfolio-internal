@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { Drawer, Input, Typography, message } from "antd";
 
 import { useStore } from "../../state/store";
@@ -7,11 +9,12 @@ import { z } from "zod";
 import { db } from "../../firebase/config";
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 
+import { Controller, useForm } from "react-hook-form";
+
 import PrimaryBtn from "../custom-buttons/PrimaryBtn";
 import { handleSuccessMesssage } from "../../helpers/messageComponent";
-import { Controller, useForm } from "react-hook-form";
-import { useEffect } from "react";
 import SecondaryBtn from "../custom-buttons/SecondaryBtn";
+import { usePermissions } from "../../hooks/usePermissions";
 
 const defaultValues = {
   question: "",
@@ -27,6 +30,8 @@ export default function AddQuestion() {
     setEditData,
   } = useStore((state) => state);
 
+  const { canCreate } = usePermissions();
+
   const questionsRef = collection(db, "/questions");
 
   const [messageApi, contextHolder] = message.useMessage();
@@ -40,26 +45,29 @@ export default function AddQuestion() {
     defaultValues,
   });
 
+  const handleActionCallback = ({ content }) => {
+    reset(defaultValues, { keepDefaultValues: false });
+    closeDrawer();
+    handleSuccessMesssage({
+      content,
+      messageMethod: messageApi,
+    });
+  };
+
   const handleOnSubmit = (data) => {
     if (!!Object.keys(dataForEdit).length) {
       const docRef = doc(db, "questions", dataForEdit?.id);
       updateDoc(docRef, {
         ...data,
       }).then(() => {
-        reset(defaultValues, { keepDefaultValues: false });
-        closeDrawer();
-        handleSuccessMesssage({
+        handleActionCallback({
           content: "Question has been updated successfully",
-          messageMethod: messageApi,
         });
       });
     } else
       addDoc(questionsRef, data).then(() => {
-        reset(defaultValues, { keepDefaultValues: false });
-        closeDrawer();
-        handleSuccessMesssage({
+        handleActionCallback({
           content: "Question has been added successfully",
-          messageMethod: messageApi,
         });
       });
   };
@@ -82,7 +90,7 @@ export default function AddQuestion() {
         <h6 className="capitalize text-cGrey-25 font-light text-2xl lg:text-4xl">
           Adding new questions
         </h6>
-        <PrimaryBtn onClick={openDrawer} label="Add new" />
+        {canCreate && <PrimaryBtn onClick={openDrawer} label="Add new" />}
       </div>
       {contextHolder}
       <Drawer
