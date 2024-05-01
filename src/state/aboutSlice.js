@@ -1,5 +1,6 @@
 export const aboutSlice = (set) => ({
   statsDrawerOpen: false,
+  infoDrawerOpen: false,
 
   setStatsDrawerOpen: () =>
     set(() => ({
@@ -8,5 +9,14 @@ export const aboutSlice = (set) => ({
   setStatsDrawerClose: () =>
     set(() => ({
       statsDrawerOpen: false,
+    })),
+
+  setInfoDrawerOpen: () =>
+    set(() => ({
+      infoDrawerOpen: true,
+    })),
+  setInfoDrawerClose: () =>
+    set(() => ({
+      infoDrawerOpen: false,
     })),
 });
