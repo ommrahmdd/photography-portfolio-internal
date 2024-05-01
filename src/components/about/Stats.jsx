@@ -88,7 +88,7 @@ export default function AboutStats() {
   return (
     <div>
       {contextHolder}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center pb-5 border-b-2 border-cOrange border-opacity-35">
         <h6 className="text-2xl font-light lg:text-5xl">Satistics</h6>
         <PrimaryBtn label="Edit" onClick={setStatsDrawerOpen} />
       </div>
