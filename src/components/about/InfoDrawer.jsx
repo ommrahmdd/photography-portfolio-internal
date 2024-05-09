@@ -87,8 +87,6 @@ export default function InfoDrawer({ drawerData }) {
       });
   };
 
-  console.log("ddddddddddddddd", getValues());
-
   const uploadHandler = ({ imgName, image }) => {
     setLoading(true);
     let imageRef = ref(storage, `about/${imgName + v4()}`);
