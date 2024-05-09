@@ -26,7 +26,7 @@ export default function Info() {
       </div>
 
       {/* ------------------------------- Info */}
-      <div className="px-4 py-8 space-y-16">
+      <div className="px-4 py-8 space-y-20">
         <TextTemplate
           title="Cover image"
           text={

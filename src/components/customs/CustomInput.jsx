@@ -6,9 +6,10 @@ export default function CustomInput({
   errorMessage,
   children,
   isRequired,
+  className,
 }) {
   return (
-    <div className="mb-5">
+    <div className={`mb-5 ${className}`}>
       <Typography.Title level={5} className="font-light capitalize space-x-2">
         {label}{" "}
         {isRequired && <Typography.Text type="danger">*</Typography.Text>}

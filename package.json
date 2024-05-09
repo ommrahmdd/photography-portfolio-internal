@@ -8,9 +8,7 @@
     "@clerk/themes": "^2.0.0",
     "@hookform/resolvers": "^3.3.4",
     "@react-query-firebase/firestore": "^1.0.0-dev.7",
-    "@tanstack/react-form": "^0.19.4",
     "@tanstack/react-router": "^1.28.4",
-    "@tanstack/zod-form-adapter": "^0.19.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -23,15 +21,18 @@
     "react-scripts": "5.0.1",
     "sass": "^1.75.0",
     "sass-loader": "^14.2.1",
+    "save-dev": "^0.0.1-security",
     "uuid": "^9.0.1",
     "web-vitals": "^2.1.4",
+    "webpack": "^5.91.0",
+    "webpack-dev-server": "^5.0.4",
     "zod": "^3.23.4",
     "zustand": "^4.5.2"
   },
   "scripts": {
-    "start": "react-scripts start --port 430",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start ",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -53,6 +54,9 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.3"
+    "react-app-rewire-alias": "^1.1.7",
+    "react-app-rewired": "^2.2.1",
+    "tailwindcss": "^3.4.3",
+    "webpack-cli": "^5.1.4"
   }
 }

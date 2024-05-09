@@ -11,6 +11,7 @@ export default function Auth({ children }) {
   const userRole = user?.organizationMemberships[0]?.role;
 
   if (!user) {
+    console.log("dddddddddddd", userRole);
     redirect({
       to: "/unAuth",
     });
